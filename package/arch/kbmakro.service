@@ -1,0 +1,9 @@
+[Unit]
+Description=Keyboard makro
+
+[Service]
+Type=simple
+ExecStart=/home/doeringc/Utils/a.out /home/doeringc/Utils/a.kb
+
+[Install]
+WantedBy=multi-user.target

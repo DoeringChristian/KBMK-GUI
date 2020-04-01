@@ -1,0 +1,15 @@
+
+
+source = ("https://github.com/DoeringChristian/KBMK-GUI/releases/download/0.1/test-kbmk-ui-01") 
+source += ("https://github.com/DoeringChristian/KB-makro/releases/download/1.0.1/a.out")
+
+package(){
+    git clone https://github.com/DoeringChristian/KB-makro.git
+    cd KB-makro.git
+    gcc mainc. kbmk.c
+    cp a.out ../
+    cd ..
+    rm -rf KB-makro/
+    sudo cp kbmakro.service /etc/systemd/system/
+    sudo systemctl enable --now kbmakro.service 
+}

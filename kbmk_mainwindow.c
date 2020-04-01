@@ -348,7 +348,7 @@ void kbmk_mainwindow_export_file(kbmk_mainwindow_t *mainwindow, char *filename){
     if(index == -1)
         fprintf(fp, "-event\n");
     else{
-        fprintf(fp, "-event %s\n", (*SLL_LIST_ELEMENT_AT(kbmk_keyboard_p)(mainwindow->keyboards, index))->event);
+        fprintf(fp, "-%s\n", (*SLL_LIST_ELEMENT_AT(kbmk_keyboard_p)(mainwindow->keyboards, index))->event);
     }
 
     SLL_FOR_EACH(tmp IN mainwindow->layout){
